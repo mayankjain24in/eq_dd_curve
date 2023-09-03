@@ -10,37 +10,14 @@ import datetime
 
 
 st.set_page_config(page_title = 'Crude_EQ_Curve', page_icon = "tada")
-# st.markdown('Crude_EQ_Curve')
-# st.title('Crude_EQ_Curve')
 st.subheader('Crude_EQ_Curve')
-# st.header('Crude_EQ_Curve')
-# st.text('Hello World!!!')
-# st.text('This is so cool !!')
-
-# st.write('#### This is a text ... ')
-# st.write(2+2)
-
-
-
-
-# @st.cache
-
 ## SETTING COLUMN ...
 # header_left, header_mid, header_right = st.columns([1,3,1], gap = 'large')
 
 column1, column2, column3 = st.columns(3) #, gap = 'large' , column4, column5
 
-# image = Image.open(r'C:\Users\mayan\Python\Streamlit\images/analysis.png')
-# st.sidebar.image(image, width = 150, caption = 'Designed by Mayank ...', use_column_width = False)
-
-# st.subheader('MIS 2022-23')
-
 ## LOADING DATARAME ...
 df = pd.read_excel('crude_backtest_data_analysis.xlsx')
-
-# name = 'Mayank ....'
-# if st.button('Press Here ....'):
-#     st.write(f'Welcome Aboard {name.upper()}')
 
 time_list = sorted(list(df['strategy_time'].unique()))
 time = st.sidebar.selectbox('Time', time_list)
